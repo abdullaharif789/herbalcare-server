@@ -53,7 +53,7 @@ class OrderController extends BaseController
         }
 
         $order = Order::create($input);
-        return $order;
+        return new OrderResource($order);
     }
 
     // /**
