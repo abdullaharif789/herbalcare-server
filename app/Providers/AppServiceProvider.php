@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Providers;
-
+use App\Http\Resources\ProductResource;
 use Illuminate\Support\ServiceProvider;
-use App\Http\Resources\RegistrationResource;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        RegistrationResource::withoutWrapping();
+        ProductResource::withoutWrapping();
     }
 }

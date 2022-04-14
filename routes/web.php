@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/login', 'App\Http\Controllers\ApiAuthController@login')->name('login.api');
+Route::apiResource('products', 'App\Http\Controllers\ProductController');
+Route::apiResource('variants', 'App\Http\Controllers\VariantController');
