@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Http\Resources\ProductResource;
 use Validator;
 
 class ProductController extends BaseController
@@ -67,7 +66,6 @@ class ProductController extends BaseController
             return $this->sendError('Category not found.');
         }
         return $product;
-        // return new ProductResource($product);
     }
 
     /**
