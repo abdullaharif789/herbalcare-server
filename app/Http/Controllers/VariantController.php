@@ -22,6 +22,9 @@ class VariantController extends BaseController
             if(isset($filter->product_id)){
                 $variants=$variants->where('product_id',$filter->product_id);
             }
+            if(isset($filter->variant_id)){
+                $variants=$variants->where('id',$filter->variant_id);
+            }
         }
         if($request->get("range")){
             $range=json_decode($request->get("range"));
