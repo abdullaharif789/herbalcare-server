@@ -24,10 +24,10 @@ class OrderController extends BaseController
                 $orders=$orders->where('variant_id',$filter->variant_id);
             }
         }
-        if($request->get("range")){
-            $range=json_decode($request->get("range"));
-            $orders=$orders->offset($range[0])->limit($range[1]-$range[0]+1);
-        }
+        // if($request->get("range")){
+        //     $range=json_decode($request->get("range"));
+        //     $orders=$orders->offset($range[0])->limit($range[1]-$range[0]+1);
+        // }
         return OrderResource::collection($orders->get());
     }
 

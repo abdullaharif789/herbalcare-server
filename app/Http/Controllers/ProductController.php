@@ -23,10 +23,10 @@ class ProductController extends BaseController
                 $products=$products->where('name','like',"%".strtolower($filter->name)."%");
             }
         }
-        if($request->get("range")){
-            $range=json_decode($request->get("range"));
-            $products=$products->offset($range[0])->limit($range[1]-$range[0]+1);
-        }
+        // if($request->get("range")){
+        //     $range=json_decode($request->get("range"));
+        //     $products=$products->offset($range[0])->limit($range[1]-$range[0]+1);
+        // }
         return $products->get();
     }
 
